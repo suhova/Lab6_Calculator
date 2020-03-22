@@ -75,11 +75,11 @@ namespace Lab6_Calculator
             this.input.Name = "input";
             this.input.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom| System.Windows.Forms.AnchorStyles.Left| System.Windows.Forms.AnchorStyles.Right);
             this.input.ColumnCount = 1;
-            this.input.Controls.Add(this.disp, 0, 0);
             this.input.RowCount = 3;
+            this.input.Controls.Add(this.disp, 0, 0);
             this.input.Controls.Add((Control)this.nums, 0, 1);
             this.input.Controls.Add((Control)this.res, 0, 2);
-            this.input.Location = new System.Drawing.Point(16, 15);
+            this.input.Location = new System.Drawing.Point(15, 15);
             this.input.Margin = new System.Windows.Forms.Padding(10);
             this.input.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.input.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50));
@@ -126,7 +126,7 @@ namespace Lab6_Calculator
             this.disp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.disp.Size = new System.Drawing.Size(this.Width, 50);
             this.disp.BorderStyle = BorderStyle.None;
-            this.disp.Font = new System.Drawing.Font("Arial", 24, System.Drawing.FontStyle.Bold);
+            this.disp.Font = new System.Drawing.Font("Arial", 19, System.Drawing.FontStyle.Bold);
             this.disp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // res
@@ -135,6 +135,7 @@ namespace Lab6_Calculator
             this.res.Font = new Font("Arial", 20);
             this.res.Name = "res";
             this.res.Text = "=";
+            this.res.TabIndex = 0;
             // 
             // plus
             // 
@@ -150,13 +151,6 @@ namespace Lab6_Calculator
             this.minus.Name = "minus";
             this.minus.Text = "-";
             // 
-            // b0
-            // 
-            this.b0.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.b0.Font = new Font("Arial", 14);
-            this.b0.Name = "b0";
-            this.b0.Text = "0";
-            // 
             // mul
             // 
             this.mul.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -170,7 +164,13 @@ namespace Lab6_Calculator
             this.div.Font = new Font("Arial", 20);
             this.div.Name = "div";
             this.div.Text = "/";
-            //        this.div.Click += new System.EventHandler(this.BtnDiv_Click);
+            // 
+            // b0
+            // 
+            this.b0.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.b0.Font = new Font("Arial", 14);
+            this.b0.Name = "b0";
+            this.b0.Text = "0";
             // 
             // b1
             // 
@@ -255,6 +255,8 @@ namespace Lab6_Calculator
             // CalculatorForm
             //             
             this.Name = "CalculatorForm";
+            this.MaximizeBox = false;
+            this.KeyPreview = true;
             this.BackColor = Color.White;
             this.Controls.Add(this.input);
             this.Margin = new System.Windows.Forms.Padding(10);
