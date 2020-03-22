@@ -231,7 +231,6 @@ namespace Lab6_Calculator
                     result /= x;
                     break;
             }
-         //   result = (float)Math.Round(result, 5);
             disp.Text = this.result.ToString();
             Clipboard.SetText(result.ToString());
             x = 0;
